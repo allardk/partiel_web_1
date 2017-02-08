@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link href="assets/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="content">
+		<header>
+			<h1>Accueil</h1>
+			<p>Organisateur de concours de sauts d'obstacles</p>
+		</header>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">Accueil</a>
+				</li>
+				<li>
+					<a href="vainqueurs2016.html">Vainqueurs de l'ann&eacute;e 2016</a>
+				</li>
+				<li>
+					<a href="inscription.html">Formulaire d'inscription &agrave; un concours</a>
+				</li>
+			</ul>
+		</nav>
+		<section>
+			<div class="block">
+				<h4>Formulaire d'inscription</h4>
+				<div class="form">
+				<form name="form" onsubmit="check()" action="#">
+						<label for="prenom">Pr&eacute;nom</label>
+						<input type="text" id="prenom" name="prenom">
+						<p id="erreur_prenom" style="clear:both; display: none; color: red;">Veuillez saisir un pr&eacute;nom</p>
+
+						<label for="nom">Nom de famille</label>
+						<input type="text" id="nom" name="nom">
+						<p id="erreur_nom" style="clear: both; display: none; color: red;">Veuillez saisir un nom</p>
+
+
+						<label for="email">Courriel</label>
+						<input type="email" id="email" name="email">
+						<p id="erreur_email" style="clear: both; display: none; color: red;">Veuillez saisir un email</p>
+
+
+						<label for="tel">T&eacute;l&eacute;phone</label>
+						<input type="tel" id="tel" name="tel">	
+						<p id="erreur_tel" style="clear: both; display: none; color: red;">Veuillez saisir un t&eacute;l&eacute;phone</p>
+
+
+						<label for="adresse">Adresse</label>
+						<textarea id="adresse" name="adresse" cols="25" rows="5"></textarea>
+						<p id="erreur_adresse" style="clear: both; display: none; color: red;">Veuillez saisir une adresse</p>
+
+
+						<label for="soumettre">&nbsp;</label>
+						<input type="submit" id="soumettre" value="Soumettre">
+					</form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		web development by Allard K&eacute;vin 2017
+	</footer>
+
+	<script>
+	function check() {
+		if (document.forms['form']["prenom"] != ""){
+			document.getElementById("erreur_prenom").style.display = "block";
+		}
+		if (document.forms['form']["nom"] != ""){
+			document.getElementById("erreur_nom").style.display = "block";
+		}
+		if (document.forms['form']["tel"] != ""){
+			document.getElementById("erreur_tel").style.display = "block";
+		}
+		if (document.forms['form']["email"] != ""){
+			document.getElementById("erreur_email").style.display = "block";
+		}
+		if (document.forms['form']["adresse"] != ""){
+			document.getElementById("erreur_adresse").style.display = "block";
+		}
+	}
+	</script>
+</body>
+</html>
